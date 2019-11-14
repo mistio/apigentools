@@ -20,8 +20,8 @@ from apigentools.utils import change_cwd, get_current_commit, run_command, write
 
 log = logging.getLogger(__name__)
 
-REPO_SSH_URL = 'git@github.com:{}/{}.git'
-REPO_HTTPS_URL = 'https://{}github.com/{}/{}.git'
+REPO_SSH_URL = 'git@gitlab.ops.mist.io:{}/{}.git'
+REPO_HTTPS_URL = 'https://{}gitlab.ops.mist.io/{}/{}.git'
 
 
 class GenerateCommand(Command):
