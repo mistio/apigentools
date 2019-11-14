@@ -36,11 +36,12 @@ class Command(abc.ABC):
         :return: path to directory with generated language code
         :rtype: ``str``
         """
-        lc = self.config.get_language_config(lang)
-        return os.path.join(
-            self.get_generated_lang_dir(lang),
-            chevron.render(lc.version_path_template, {'spec_version': version}),
-        )
+        return self.get_generated_lang_dir(lang)
+        # lc = self.config.get_language_config(lang)
+        # return os.path.join(
+        #     self.get_generated_lang_dir(lang),
+        #     chevron.render(lc.version_path_template, {'spec_version': version}),
+        # )
 
     @abc.abstractmethod
     def run(self):
